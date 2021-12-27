@@ -28,7 +28,8 @@ class Header extends Component {
             data-testid="total-field"
             className="emailHeader"
           >
-            {`Despesa total: R$${sumExpenses.toFixed(2)} BRL`}
+            {`Despesa total: ${sumExpenses
+              .toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} BRL`}
           </p>
         </div>
       </header>
